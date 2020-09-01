@@ -1,0 +1,19 @@
+.row {
+    color: white;
+    margin-left: 20px;
+}
+.row__drinks{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row__drinks::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.row__drinks {
+    -ms-overflow-style: none; /* IE and Edge */
+}

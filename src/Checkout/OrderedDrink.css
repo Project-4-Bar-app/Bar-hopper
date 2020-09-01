@@ -1,0 +1,26 @@
+.orderedDrink{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.orderedDrink > img{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+
+.orderedDrink__info{
+    padding: 20px;
+}
+
+.orderedDrink__info > button{
+    background-color: yellow;
+    color: black;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.orderedDrink__name{
+    font-size: 17px;
+    font-weight: 800;
+}

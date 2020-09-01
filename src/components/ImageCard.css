@@ -1,0 +1,41 @@
+.imageCard {
+    color: white;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    transition: transform 100ms; /* to make trasformation silky smooth */
+}
+.imageCard:hover {
+    transform: scale(1.09);
+}
+
+.imageCard > img {
+    height: 300px;
+    object-fit: contain;
+    width: 300px;
+}
+
+.imageCard > h2,h3 {
+    padding-top: 5px;
+}
+
+.imageCard__info{
+    display: none;
+}
+
+.imageCard:hover > .imageCard__info{
+    display: inline;
+}
+
+.imageCard__drinkOrder{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 195px;
+}
+
+.imageCard__drinkOrder > button{
+    background-color: yellow;
+    border: 1px solid;
+    border-radius: 10px;
+}

@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Home from './Home/Home';
+import { BrowserRouter as Router, Switch, Route  } from 'react-router-dom';
+import Footer from './components/Footer';
+import SelectedBar from './SelectedBar/SelectedBar';
+import Orders from './Checkout/Orders';
 
 function App() {
+  const[ navOption, setNavOption  ] = useState (1)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="app">
+      <Router>
+        <Header navOption={navOption} setNavOption={setNavOption}/>
+          <Switch>
+            <Route exact path="/" render={() => <Home setNavOption = {setNavOption} />} />
+            <Route exact path="/menu/:id" render={(props) => <SelectedBar {...props} />} />
+            <Route exact path="/orders" render={(props) => <Orders {...props} />} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
+    
   );
 }
 
