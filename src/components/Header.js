@@ -1,12 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import './Header.css'
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import ExploreIcon from '@material-ui/icons/Explore';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import { useStateValue }from '../services/StateProvider';
 import { Link } from 'react-router-dom';
+import { getQuantity } from '../services/reducer';
 
 function Header({navOption, setNavOption}) {
     const [{ basket }] = useStateValue()
@@ -23,10 +24,7 @@ function Header({navOption, setNavOption}) {
         <div className='header'>
             <div className="header__icons">
                 <Link className="link" to="/" onClick={() => setNavOption(1) }>
-                    <div className= {navOption === 1 ? "header__icon header__icon--active" : "header__icon" }>
-                        <HomeIcon />
-                        <p>Home</p>
-                    </div>
+                    <img src="https://cdn.logojoy.com/wp-content/uploads/2018/07/30132759/bar6.png" alt="" />
                 </Link>
 
                 { navOption > 1 && 
@@ -43,15 +41,6 @@ function Header({navOption, setNavOption}) {
                         <p>Reviews</p>
                     </div>
 
-                    <Link className="link" to="/orders" onClick={() => setNavOption(4)}>
-                        <div className={navOption === 4 ? "header__icon header__icon--active" : "header__icon" }>
-                            <div className="header__basket">
-                                <ShoppingCartIcon />
-                                <span className="header__basketCount">{basket?.length}</span>
-                            </div>
-                            <p>Orders</p>
-                        </div>
-                    </Link>
                     </Fragment>
                 }
 
@@ -61,7 +50,20 @@ function Header({navOption, setNavOption}) {
                 </div>    */}
 
             </div>
-            <img src="https://cdn.logojoy.com/wp-content/uploads/2018/07/30132759/bar6.png" alt="" />
+            { navOption > 1 && 
+                    <Fragment>
+                        <Link className="link" to="/orders" onClick={() => setNavOption(4)}>
+                            <div className={navOption === 4 ? "header__icon header__icon--active" : "header__icon" }>
+                                <div className="header__basket">
+                                    <ShoppingCartIcon />
+                                    <span className="header__basketCount">{getQuantity(basket)}</span>
+                                </div>
+                                <p>Orders</p>
+                            </div>
+                        </Link>
+                    </Fragment>
+            }
+            
         </div>
     );
 }

@@ -3,10 +3,8 @@ import './Home.css'
 import Banner from './Banner';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
-import REACT_APP_API_KEY from '../'
 
 const Home = ({ setNavOption }) => {
-    console.log(process.env.REACT_APP_API_KEY);
     return (
         <div className="home"> 
             <Banner /> 

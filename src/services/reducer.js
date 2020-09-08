@@ -3,7 +3,10 @@ export const initialState = {
 }
 
 export const getBasketTotal = (basket) => 
-basket?.reduce((amount, Item) => Item.price + amount, 0);
+basket?.reduce((amount, Item) => (Item.price * Item.quantity) + amount, 0);
+
+export const getQuantity = (basket) => 
+basket?.reduce((amount, Item) => Item.quantity + amount, 0);
 
 function reducer(state, action) {
     console.log(action);

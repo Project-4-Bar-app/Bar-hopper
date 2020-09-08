@@ -30,6 +30,7 @@ const Orders = () => {
                                             style={item.style}
                                             type={item.type}
                                             price={item.price}
+                                            quantity={item.quantity}
                                         /> 
                                     ))} 
                             </div>

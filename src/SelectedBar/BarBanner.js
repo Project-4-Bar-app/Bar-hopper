@@ -45,12 +45,12 @@ function BarBanner({ bar, image }) {
                 </div>
                 <div className="barbanner__reviews">
                     {getRating(bar.rating)}  
-                    <p>{bar.review_count} reviews</p>
+                    <p className="barbanner__info">{bar.review_count} reviews</p>
                 </div>
                 <div className='barbanner__details'>
-                    <h3>Address: {bar.location?.display_address}</h3>
-                    <h3>Phone Number: {bar?.display_phone}</h3>
-                    <h3 >currently: <span style ={{color: bar?.is_closed ? "red" : "green"}}>{bar?.is_closed ? "Closed" : "Open"}</span></h3>
+                    <h3 className="barbanner__info">Address: {bar.location?.display_address}</h3>
+                    <h3 className="barbanner__info">Phone Number: {bar?.display_phone}</h3>
+                    <h3 className="barbanner__info">Currently: <span style ={{color: bar?.is_closed ? "red" : "green"}}>{bar?.is_closed ? "Closed" : "Open"}</span></h3>
                 </div>
             </div> 
             <div className='barbanner-fadeBottom'/>

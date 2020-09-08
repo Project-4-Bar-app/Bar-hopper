@@ -63,7 +63,7 @@
     font-size: small;
 }
 
-.header > img {
+.link > img {
     object-fit: contain;
     height: 80px;
 }

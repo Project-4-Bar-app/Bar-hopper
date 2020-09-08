@@ -1,6 +1,6 @@
 .imageCard {
     color: white;
-    width: 500px;
+    width: 400px;
     height: 400px;
     padding: 20px;
     transition: transform 100ms; /* to make trasformation silky smooth */
@@ -10,9 +10,18 @@
 }
 
 .imageCard > img {
+    border-radius: 15px;
+    background: #f4f4f4;
+    border: 3px solid #bbbbbb;
+
+    box-shadow: 0 0 0 3px #8B2323, 
+                0 0 0 6px #FF7F00, 
+                0 0 0 9px #458B00;
     height: 300px;
     object-fit: contain;
     width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .imageCard > h2,h3 {
@@ -38,4 +47,46 @@
     background-color: yellow;
     border: 1px solid;
     border-radius: 10px;
+}
+
+.modal{
+    width: 400px;
+    color: #f4f4f4;
+}
+.modal__header{
+    background: #00B500;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal__closebtn{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal__body{
+    padding: 1.5rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal__body > button{
+    background-color: #215224;
+    color: white;
+    text-transform: inherit;
+    margin: 15px;
+}
+.modal__body > button:hover{
+    background-color: white;
+    color: #215224;
+}
+
+.modal__confirm{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './Subtotal.css'
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from '../services/StateProvider';
-import { getBasketTotal } from '../services/reducer';
+import { getBasketTotal, getQuantity } from '../services/reducer';
 
 function Subtotal(props) {
     const [ {basket}, dispatch] = useStateValue();
@@ -11,7 +11,7 @@ function Subtotal(props) {
             <CurrencyFormat 
                 renderText={(value) => (
                     <p>
-                        subtotal ({basket.length} drinks) : <strong>{` ${value}`}</strong>
+                        subtotal ({ getQuantity(basket)} drinks) : <strong>{` ${value}`}</strong>
                     </p>
                 )}
                 decimalScale={2}

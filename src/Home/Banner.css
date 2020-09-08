@@ -14,13 +14,13 @@
 }
 
 .banner__info > button{
-    background-color: #77ff82;
+    background-color: #215224;
     color: white;
     text-transform: inherit;
 }
 .banner__info > button:hover{
     background-color: white;
-    color: #77ff82;
+    color: #215224;
 }
 
 .banner__info > h5{
