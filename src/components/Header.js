@@ -9,8 +9,10 @@ import { useStateValue }from '../services/StateProvider';
 import { Link } from 'react-router-dom';
 import { getQuantity } from '../services/reducer';
 
-function Header({navOption, setNavOption}) {
+function Header({navOption, setNavOption, locate}) {
     const [{ basket }] = useStateValue()
+    // const location = useLocation()
+    // const[location, setLocation] = ()
 
     // const [nav, setNav] = useState(1)
 
@@ -18,8 +20,10 @@ function Header({navOption, setNavOption}) {
     //     setNav(navOption)
     // },[navOption])
 
-    
+   
+    console.log(locate);
 
+    
     return (
         <div className='header'>
             <div className="header__icons">
@@ -29,17 +33,22 @@ function Header({navOption, setNavOption}) {
 
                 { navOption > 1 && 
                     <Fragment>
-                    <div className={navOption === 2 ? "header__icon header__icon--active" : "header__icon" }>
-                    <Link className="link" to="/menu" onClick={() => setNavOption(2)} > <LocalBarIcon /></Link> 
-                        <p>Drink Menu</p>
-                    </div> 
+                    <Link className="link" to={locate} onClick={() => setNavOption(2)} > 
+                        <div className={navOption === 2 ? "header__icon header__icon--active" : "header__icon" }>
+                            <LocalBarIcon />
+                            <p>Drink Menu</p>
+                        </div> 
+                    </Link> 
                 
 
-
-                    <div className={navOption === 3 ? "header__icon header__icon--active" : "header__icon" }>
-                        <RecordVoiceOverIcon />
-                        <p>Reviews</p>
-                    </div>
+                    <Link className="link" to='/explore' onClick={() => setNavOption(3)} > 
+                        <div className={navOption === 3 ? "header__icon header__icon--active" : "header__icon" }>
+                            <ExploreIcon /> 
+                            <p>Explore</p>
+                            {/* <RecordVoiceOverIcon />
+                            <p>Reviews</p> */}
+                        </div>
+                    </Link>
 
                     </Fragment>
                 }
