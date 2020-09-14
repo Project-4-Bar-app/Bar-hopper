@@ -66,4 +66,5 @@
 .link > img {
     object-fit: contain;
     height: 80px;
+    margin-right: 35px;
 }

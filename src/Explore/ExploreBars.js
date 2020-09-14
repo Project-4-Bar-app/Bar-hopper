@@ -19,17 +19,15 @@ function ExploreBars(props) {
         setBars(res.data)
     }
     fetchData();
-    }, [] )
+    },[] )
 
     return (
-        <div className="exploreBars">
         <div className="exploreBars">
                 {bars.businesses?.map((bar) => (
                         <BarResult key={bar.id} bar={bar} />
                     ))} 
-            </div>
-            
         </div>
+            
     );
 }
 

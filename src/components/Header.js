@@ -4,7 +4,6 @@ import './Header.css'
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import ExploreIcon from '@material-ui/icons/Explore';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import { useStateValue }from '../services/StateProvider';
 import { Link } from 'react-router-dom';
 import { getQuantity } from '../services/reducer';

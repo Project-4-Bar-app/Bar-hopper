@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    /* position: fixed; */
     border-top: 1px solid #1f5c91;
     padding: 20px;
     background-color: #084377;
@@ -9,6 +9,6 @@
 } 
 
 .footer > p {
-    padding: 5px;
+    padding: 2px;
     font-size: 14px;  
 }
