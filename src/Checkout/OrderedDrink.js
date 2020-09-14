@@ -4,7 +4,7 @@ import { useStateValue } from '../services/StateProvider';
 
 function OrderedDrink({ id, name, imageUrl, ingredients, style, type, price, quantity }){
 
-    const [ { basket }, dispatch] = useStateValue();
+    const [ , dispatch] = useStateValue();
 
     const RemoveFromBasket = () => {
         // remove item from basket

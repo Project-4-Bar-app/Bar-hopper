@@ -3,11 +3,9 @@ import './Orders.css'
 import { useStateValue } from '../services/StateProvider';
 import OrderedDrink from './OrderedDrink';
 import Subtotal from './Subtotal';
-import { useParams } from 'react-router-dom';
 
 const Orders = () => {
     const[{ basket }] = useStateValue();
-    const {id, loc} = useParams();
 
 
     return (

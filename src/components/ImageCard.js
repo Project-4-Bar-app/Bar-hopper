@@ -9,7 +9,7 @@ function ImageCard({ drink }){
     const [isOpen, setIsOpen] = useState(false)
     const [input, setInput] = useState(1)
 
-    const[{ basket },dispatch] = useStateValue();
+    const[,dispatch] = useStateValue();
 
     const addToBasket = () => {
         // Adding item to basket

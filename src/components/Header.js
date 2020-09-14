@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import './Header.css'
 // import HomeIcon from '@material-ui/icons/Home';
 import LocalBarIcon from '@material-ui/icons/LocalBar';

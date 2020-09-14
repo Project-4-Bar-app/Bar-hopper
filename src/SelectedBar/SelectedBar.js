@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
-import Drinks from '../components/Drinks';
-import requests from '../services/requests';
+// import Nav from '../components/Nav';
+// import Drinks from '../components/Drinks';
+// import requests from '../services/requests';
 import Row from './Row';
 import { Cocktails, ShotCombos, Draft, Bottle, Canned, Wine } from '../Data/data';
 import axios from 'axios';
