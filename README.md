@@ -7,10 +7,10 @@ A simple website made to help find a bar and get a drink with ease.
 
 ## What I Learned
 
-Context api
-Using only hooks and functional components
-Using useHistory hook  
-& much more
+* Context api
+* Using only hooks and functional components
+* Using useHistory hook  
+* & much more
 
  Give it try  [here](vibrant-swartz-b592af.netlify.app/)
 
