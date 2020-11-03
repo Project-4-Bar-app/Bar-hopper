@@ -41,7 +41,7 @@ const ShotCombos =
           id: 6,
           name: "Fernet Branca & Anchor Steam",
           price: 11.00,
-          imageUrl: "https://imbibemagazine.com/wp-content/uploads/2017/11/la-sirena-clandestina-house-shot-master-horizontal-crdt-emma-janzen-copy.jpg"
+          imageUrl: "https://cdn.shopify.com/s/files/1/1044/1362/products/c7c02a09cf38ab3dfed1a1f284ff5e658301e4a3_1024x1024.jpeg?v=1543311349"
         },
         {       
           id: 7,
@@ -125,7 +125,7 @@ const Bottle = [
         {id: 23,
           name: "Brooklyn Lager",
         price: 6.00,
-        imageUrl:"https://i1.wp.com/drinkhacker.com/wp-content/uploads/2019/05/lager-525x465.png?resize=525%2C465&ssl=1"},
+        imageUrl:"https://images.ctfassets.net/sz2xpiwl6od9/5oeyNHdBKgCEgCGiSkyAq2/202f1b3c007a888fa8c0499d54c7b635/Brooklyn_East_IPA_17-05-08_CBB_Issue_20_reviews-042.jpg?w=900"},
         {id: 24,
           name:"Negra Modelo",
         price: 6.00,

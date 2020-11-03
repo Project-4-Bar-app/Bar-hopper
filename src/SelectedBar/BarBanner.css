@@ -70,3 +70,25 @@
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 970px) {
+
+    .barbanner__contents {
+        margin-left: 30px;
+        padding-top: 140px;
+    }
+
+    .barbanner__reviews {
+        display: flex;
+        flex-direction: column;
+        max-width: 150px; 
+    }
+
+    .barbanner__details{
+        margin-top: -21px;
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+    }
+
+}
