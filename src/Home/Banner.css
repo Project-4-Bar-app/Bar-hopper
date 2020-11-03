@@ -27,3 +27,20 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 760px) {
+    .banner__info {
+        width: 100%;
+        height: 23vh;
+        flex-basis: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

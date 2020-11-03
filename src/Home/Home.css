@@ -2,3 +2,13 @@
     display: flex;
     padding: 30px;
 }
+
+@media screen and (max-width: 860px) {
+    .home__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
