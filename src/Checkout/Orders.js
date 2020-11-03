@@ -17,7 +17,7 @@ const Orders = () => {
                         <p>You have no orders requested. To add to orders, click the "Order drink" button of the drink you prefer.</p>
                     </div>
                 ) : (
-                        <div className='checkout'>
+                        <div className='checkouts'>
                             <div className='checkout_left'>
                                 <h2 className='checkout_intro'>Your Orders</h2>
                                 {basket.map((item) => (

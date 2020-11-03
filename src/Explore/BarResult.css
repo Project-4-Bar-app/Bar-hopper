@@ -54,3 +54,8 @@
     margin-left: 15px;   
 }
 
+@media screen and (max-width: 730px) {
+    .barResult {
+        flex-direction: column;
+    }
+}
