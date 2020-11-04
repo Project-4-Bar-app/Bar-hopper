@@ -74,8 +74,9 @@
 @media screen and (max-width: 970px) {
 
     .barbanner__contents {
-        margin-left: 30px;
-        padding-top: 140px;
+        margin-left: 10px;
+        padding-top: 50px;
+        padding-bottom: 89px;
     }
 
     .barbanner__reviews {
@@ -85,10 +86,12 @@
     }
 
     .barbanner__details{
-        margin-top: -21px;
+        
         display: flex;
         flex-direction: column;
-        max-width: 550px;
+        width: fit-content;
+        max-width: 500px
+        
     }
 
 }
