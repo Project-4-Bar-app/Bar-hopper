@@ -58,4 +58,8 @@
     .barResult {
         flex-direction: column;
     }
+
+    .barResult > img {
+        max-width: 95%;
+    }
 }

@@ -1,15 +1,21 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import './Header.css'
 // import HomeIcon from '@material-ui/icons/Home';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import ExploreIcon from '@material-ui/icons/Explore';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue }from '../services/StateProvider';
 import { Link } from 'react-router-dom';
 import { getQuantity } from '../services/reducer';
 
 function Header({navOption, setNavOption, locate}) {
     const [{ basket }] = useStateValue()
+
+    const [click, setClick] = useState(false)
+
+    const handleClick = () => setClick(!click)
     // const location = useLocation()
     // const[location, setLocation] = ()
 
@@ -31,7 +37,15 @@ function Header({navOption, setNavOption, locate}) {
                 </Link>
 
                 { navOption > 1 && 
-                    <Fragment>
+                    <>
+                    <div className="menu__icon" onClick={handleClick}>
+                        {click ? <CloseIcon /> : <MenuIcon />}
+                    </div>
+                    </>
+                }
+
+                { navOption > 1 && 
+                    <Fragment className={click ? 'nav__menu active' : 'nav__menu'}>
                     <Link className="link" to={locate} onClick={() => setNavOption(2)} > 
                         <div className={navOption === 2 ? "header__icon header__icon--active" : "header__icon" }>
                             <LocalBarIcon />
@@ -49,6 +63,16 @@ function Header({navOption, setNavOption, locate}) {
                         </div>
                     </Link>
 
+                    <Link className="link" to="/orders" onClick={() => setNavOption(4)}>
+                            <div className={navOption === 4 ? "header__icon header__icon--active" : "header__icon" }>
+                                <div className="header__basket">
+                                    <ShoppingCartIcon />
+                                    <span className="header__basketCount">{getQuantity(basket)}</span>
+                                </div>
+                                <p>Orders</p>
+                            </div>
+                        </Link>
+
                     </Fragment>
                 }
 
@@ -58,19 +82,6 @@ function Header({navOption, setNavOption, locate}) {
                 </div>    */}
 
             </div>
-            { navOption > 1 && 
-                    <Fragment>
-                        <Link className="link" to="/orders" onClick={() => setNavOption(4)}>
-                            <div className={navOption === 4 ? "header__icon header__icon--active" : "header__icon" }>
-                                <div className="header__basket">
-                                    <ShoppingCartIcon />
-                                    <span className="header__basketCount">{getQuantity(basket)}</span>
-                                </div>
-                                <p>Orders</p>
-                            </div>
-                        </Link>
-                    </Fragment>
-            }
             
         </div>
     );
