@@ -15,7 +15,6 @@ function ExploreBars(props) {
         }
         })
 
-        console.log(res.data);
         setBars(res.data)
     }
     fetchData();
@@ -23,7 +22,7 @@ function ExploreBars(props) {
 
     return (
         <div className="exploreBars">
-                {bars.businesses?.map((bar) => (
+                {bars && bars.businesses?.map((bar) => (
                         <BarResult key={bar.id} bar={bar} />
                     ))} 
         </div>
