@@ -23,11 +23,11 @@ function ExploreBars(props) {
 
     return (
         <div className="exploreBars">
-                {/* {bars && bars.businesses?.map((bar) => (
+                {bars && bars.businesses?.map((bar) => (
                         <BarResult key={bar.id} bar={bar} />
-                    ))}  */}
+                    ))} 
 
-                {bars && [1,2,3,4,5].map((n) => <SkeletonBarResult key={n} theme='dark' />)} 
+                {!bars && [1,2,3,4,5].map((n) => <SkeletonBarResult key={n} theme='dark' />)} 
         </div>
             
     );

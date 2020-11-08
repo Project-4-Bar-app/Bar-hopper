@@ -4,6 +4,8 @@
     background: #ddd;
     margin: 10px 0;
     border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 .skeleton.text {
@@ -39,6 +41,8 @@
     border-bottom: 1px solid lightgray;
     display: flex;
     border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 .skeleton__barresult {
@@ -61,6 +65,36 @@
 }
 .skeleton__wrapper.dark .skeleton {
     background: #777;  
+}
+
+/* animation effects */
+
+.shimmer-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: loading 2.5s infinite;
+    overflow: hidden;
+}
+
+.shimmer {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: skewX(-20deg);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.dark .shimmer {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes loading {
+    0% { transform: translateX(-150%) }
+    50% { transform: translateX(-60%) }
+    100% { transform: translateX(150%) }
 }
 
 @media screen and (max-width: 960px) {
