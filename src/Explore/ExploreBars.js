@@ -3,7 +3,6 @@ import './ExploreBars.css';
 import axios from 'axios';
 import BarResult from './BarResult';
 import SkeletonBarResult from '../skeletons/SkeletonBarResult';
-import SkeletonElements from '../skeletons/SkeletonElements';
 
 function ExploreBars(props) {
 
@@ -26,14 +25,9 @@ function ExploreBars(props) {
         <div className="exploreBars">
                 {/* {bars && bars.businesses?.map((bar) => (
                         <BarResult key={bar.id} bar={bar} />
-                    ))} 
+                    ))}  */}
 
-                {!bars && [1,2,3,4,5].map((n) => <SkeletonBarResult key={n} />)}  */}
-                <SkeletonElements  type="title"/>
-                <SkeletonElements  type="text"/>
-                <SkeletonElements  type="thumbnail"/>
-                <SkeletonElements  type="img"/>
-                <SkeletonElements  type="avatar"/>
+                {bars && [1,2,3,4,5].map((n) => <SkeletonBarResult key={n} theme='dark' />)} 
         </div>
             
     );

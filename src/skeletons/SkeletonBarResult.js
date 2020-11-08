@@ -1,10 +1,11 @@
 import React from 'react';
 import SkeletonElements from './SkeletonElements';
-import './Skeleton.css'
 
-const SkeletonBarResult = () => {
+const SkeletonBarResult = ({ theme }) => {
+    const themeClass = theme || 'light'
+    
     return (
-        <div className="skeleton__wrapper">
+        <div className={`skeleton__wrapper ${themeClass}`}>
             <SkeletonElements type="img" />
             <div className="skeleton__barresult">               
                 <SkeletonElements type="text" />
